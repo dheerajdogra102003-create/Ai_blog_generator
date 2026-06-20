@@ -7,4 +7,4 @@ def generate_blog(title: str):
 
     print(result)
 
-    return result["content"].content
+    return result["content"].content[0]["text"]
