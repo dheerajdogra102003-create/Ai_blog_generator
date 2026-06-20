@@ -10,20 +10,20 @@ load_dotenv()
 
 
 # %%
-model=ChatHuggingFace(
-    llm=HuggingFaceEndpoint(
-        model="deepseek-ai/DeepSeek-V3.2",
-        # model="Qwen/Qwen3-32B",
-        temperature=0.7
-    )
-)
-
-
-# model = ChatGoogleGenerativeAI(
-#     model="gemini-flash-latest", # Changed model name to gemini-flash-latest based on available models
-#     temperature=0,
-#     # timeout=15
+# model=ChatHuggingFace(
+#     llm=HuggingFaceEndpoint(
+#         model="deepseek-ai/DeepSeek-V3.2",
+#         # model="Qwen/Qwen3-32B",
+#         temperature=0.7
+#     )
 # )
+
+
+model = ChatGoogleGenerativeAI(
+    model="gemini-flash-latest", # Changed model name to gemini-flash-latest based on available models
+    temperature=1.3
+    # timeout=15
+)
 
 # %%
 class BLOGState(TypedDict):
