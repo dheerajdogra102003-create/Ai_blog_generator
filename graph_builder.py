@@ -49,7 +49,7 @@ def create_blog(state:BLOGState)->BLOGState:
     outline=state['outline']
     title=state['title']
 
-    prompt=f"Write a detailed blog on the title {title}using the following outline \n{outline}. use the proper indentation and spacing and keep the tone light and funny. make the response very creative,phylosphical,logical and witty also use the emojies in abundence to make it viusllly amazing , also you can use any prose or quote stated by any person or prose of peom or any shayri or amaing thouths"
+    prompt=f"Write a detailed blog on the title {title}using the following outline \n{outline}. use the proper indentation and spacing and keep the tone light and funny. make the response very creative,phylosphical,logical and witty also use the emojies in abundence to make it viusllly amazing , also you can use any prose or quote stated by any person or prose of peom or any shayri or amaing thouths  word limit should not be more than 600 words."
 
     state['content']=model.invoke(prompt)
 
